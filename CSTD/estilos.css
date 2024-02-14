@@ -1,0 +1,19 @@
+/*DELECTOR DE ETIQUETA*/
+th{
+    background-color: #267cb5ca;
+}
+
+td{
+    border: 1px solid #382b53aa;
+}
+
+/*SELECTOR DE CLASE*/
+.azul{
+    background-color: #9983efb2;
+    width: 300px;
+}
+
+/*DELECTOR DE ID*/
+#respuesta{
+    color:#382b53aa
+}

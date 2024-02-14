@@ -1,79 +1,154 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Introducción a las aplicaciones web</title>
+        <link rel="stylesheet" href="estilos.css">
     </head>
     <body>
         <div>
-            <h2>Laboratorio 1. Ximena Cantera Reséndiz</h3>
-            <p></p>
+            <h2>Bienvenidos a Peletería Cantera Reséndiz</h2>
+            <p>¡Encuentra los mejores productos de piel aquí!</p>
         </div>
 
         <div>
-            <table>
-                <colgroup>
-                    <col span="2" style = "background-color: #2b3349;">
-                    <col style = "background-color: #4b597b;">
-                </colgroup>
-                <tr>
-                    <th>PREGUNTA</th>
-                    <th>RESPUESTA</th>
-                </tr>
-                <tr>
-                    <td>¿Cuál es la diferencia entre Internet y la World Wide Web?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Cuáles son las partes de un URL?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Qué componentes de estructura y estilo tiene una tabla?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Cuáles son los principales controles de una forma HTML5?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>RESPUESTAAAAA</td>
-                </tr>
+            <h3>Nuestros Productos</h3>
+            <ul>
+                <li>Chaquetas de piel</li>
+                <li>Bolsos de cuero</li>
+                <li>Cinturones de piel genuina</li>
+                <li>Zapatos de piel para hombre y mujer</li>
+            </ul>
+        </div>
+
+        
+        <div>
+            <h3>Servicios</h3>
+            <p>Ofrecemos servicios de reparación y mantenimiento de productos de piel.</p>
+        </div>
+
+        <div>
+            <h3>Ubicación y Horario</h3>
+            <p>Miguel Hidalgo No. 809 , Local C, Pachuca 42000</p>
+            <p>Nuestro horario de atención es de lunes a viernes de 8:30am a 6:30pm y sábados de 9:30am a 2:00pm.</p>
+        </div>
+        <div id="footer">
+            <p>Contacto: 
+                mastershoespr@gmail.com | Teléfono: (55) 1234-5678</p>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/mastershoespr">Facebook</a></li>
+                <li><a href="https://www.instagram.com/mastershoespr?igsh=a2VraWVkbzF5Nmdl">Instagram</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <table align="center" width="1100">
+               <thead>
+                    <tr>
+                        <th>PREGUNTA</th>
+                        <th>RESPUESTA</th>
+                    </tr>
+               </thead>
+                <tbody>
+                    <tr>
+                        <td class="azul">¿Cuál es la diferencia entre Internet y la World Wide Web?</td>
+                        <td  id="respuesta">El internet es una red global de computadoras interconectadas en todo el mundo, mientras que la Web es una colección de páginas dentro de una red. La Web necesita del internet para acceder a la información. https://www.bbc.com/mundo/noticias-47538812</td>
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Cuáles son las partes de un URL?</td>
+                        <td id="respuesta">
+                            <table>
+                              <tr>
+                                <td>Protocolo. Define cómo se enviarán los datos, puede ser HTTP o HTTPS.</td>
+                                <td>Subdominio. Es lo que se encuentra después del protocolo, ejemplo: “www”.</td>
+                                <td>Dominio. Es el nombre del dominio y la TLD, ejemplo: “.com”.</td>
+                                <td>Ruta. Es la ubicación del recurso de un servidor.</td>
+                                <td>Parámetro. Es información extra en una URL.</td>
+                                <td>Etiqueta. Ancla a una parte especifica de la página.</td>
+                              </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</td>
+                        <td id="respuesta">
+                            <table>
+                              <tr>
+                                <td>GET. Solicita una representación de un recurso.</td>
+                                <td>HEAD. Pide el encabezado.</td>
+                                <td>POST. Envía una datos a un recurso, causando cambios en el servidor.</td>
+                                <td>PUT. Reemplaza representaciones actuales del recurso.</td>
+                                <td>DELETE. Borra un recurso específico.</td>
+                                <td>PATCH. Actualizar datos de un recurso.</td>
+                              </tr>
+                            </table>
+                        </td>
+                            
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</td>
+                        <td id="respuesta">Se utiliza un método POST, ya que al momento de enviar los datos de usuario y contraseña al servidor se realizan cambios como el inicio de sesión o mandar un mensaje sobre algún error.</td>
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</td>
+                        <td id="respuesta">Se utiliza el método Get, ya que se solicita una representación de la URL a la que corresponde.</td>
+                    </tr>
+                    <tr>
+                        <td class="azul">Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</td>
+                        <td id="respuesta">Significa que la solicitud fue exitosa y no ocurrió ningún error.
+                            https://developer.mozilla.org/es/docs/Web/HTTP/Overview</td>
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</td>
+                        <td id="respuesta">Si debe corregirlo ya que indica que el recurso no fue encontrado. A no ser que sea un error de una página eliminada o que el usuario colocó mal la URL.
+                            https://developer.mozilla.org/es/docs/Web/HTTP/Overview</td>
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</td>
+                        <td id="respuesta">Si, porque el error es interno en el servidor.
+                            https://developer.mozilla.org/es/docs/Web/HTTP/Overview</td>
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)?</td>
+                        <td id="respuesta">Significa que es obsoleto y que no es recomendado usarlo.
+                            https://softwarelab.org/es/blog/que-es-una-url/</td>
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</td>
+                        <td id="respuesta">HTML5 es mejor, ya que admite vídeo y audio, así como nuevas etiquetas como “header” y “nav”.
+                            https://softwarelab.org/es/blog/que-es-una-url/</td>
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Qué componentes de estructura y estilo tiene una tabla?</td>
+                            <td id="respuesta">
+                                <table>
+                                <tr>
+                                    <td>Estructura:Etiquetas como table,tr,th y td.</td>
+                                    <td>Estilo: CSS para bordes, colores, etc.</td>
+                                </tr>
+                                </table>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Cuáles son los principales controles de una forma HTML5?</td>
+                        <td id="respuesta">input, textarea, select y button.</td>
+                    </tr>
+                    <tr>
+                        <td class="azul">¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</td>
+                        <td id="respuesta"><img src="C:\Users\Cantera Resendiz\Desktop\Software2024\Xyimna_Labs\CSTD\html5_Edge.jpg" width="300"> </td>
+                    </tr>
+                    <tr>
+                        <td class="azul">El ciclo de vida y desarrollo de los sistemas de información:</td>
+                        <td id="respuesta">
+                            <table>
+                              <tr>
+                                <td>Ciclo de vida: Planificación, análisis, diseño, implementación, mantenimiento.</td>
+                                <td>Ciclo de desarrollo: Requisitos, diseño, construcción, pruebas, despliegue.</td>
+                              </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
 
             </table>
         </div>
