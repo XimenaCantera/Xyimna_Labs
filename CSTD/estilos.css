@@ -1,4 +1,17 @@
 /*DELECTOR DE ETIQUETA*/
+body{
+    margin: 0 auto;
+    max-width: 50em;
+    /*font-family:'Helvica','Arial','Sans-serif';         Se usa para poner un grupo de fuentes de texto para usar.*/
+    line-height: 1.5;
+    padding: 4em 1em;
+}
+
+h2{
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
 th{
     background-color: #267cb5ca;
 }
