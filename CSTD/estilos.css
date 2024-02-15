@@ -2,7 +2,7 @@
 body{
     margin: 0 auto;
     max-width: 50em;
-    /*font-family:'Helvica','Arial','Sans-serif';         Se usa para poner un grupo de fuentes de texto para usar.*/
+    font-family:'Helvica','Arial','Sans-serif';  /*       Se usa para poner un grupo de fuentes de texto para usar.*/
     line-height: 1.5;
     padding: 4em 1em;
 }
@@ -13,7 +13,7 @@ h2{
 }
 
 th{
-    background-color: #267cb5ca;
+    background-color: #40916c;
 }
 
 td{
@@ -22,11 +22,23 @@ td{
 
 /*SELECTOR DE CLASE*/
 .azul{
-    background-color: #9983efb2;
+    background-color: #74c69d;
     width: 300px;
+}
+
+.derecha{
+    float: right;
+    
+}
+
+.blueyP{
+    background-color: #b7e4c7;
+    margin-right: 1em;
+    padding-left: 1em;
 }
 
 /*DELECTOR DE ID*/
 #respuesta{
     color:#382b53aa
 }
+
