@@ -8,13 +8,16 @@
         <title>Introducción a las aplicaciones web</title>
         
     </head>
-    <body class="m-auto">
+    <body class="max-w-m m-auto">
         <div>
-            <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/241087326_1559743931042306_7376873698654842302_n.png?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeH1QMmnnlcXnuT1iw3MKxug8ljJnbZuJ2HyWMmdtm4nYcLqVcTz1nzivUpvj-UTK2WsKpKwI0oLdyB9DSGSm1eI&_nc_ohc=UEFbOO8WTS0AX9uZ-AG&_nc_ht=scontent-dfw5-1.xx&oh=00_AfAdlHpZcNE_0Tgjrv1SZby95FWNblcFKe6ylkE9R6CLXA&oe=65D2A1D2" class="derecha">
+            <img src="../Imagenes/Logo_MasterShoes.png" class="ms-auto size-28">
+        </div>
+        <div class="m-1em p-1em">
             <h2>Bienvenidos a Peletería Cantera Reséndiz</h2>
             <p>¡Encuentra los mejores productos de piel aquí!</p>
-            
         </div>
+
+
 
         <div>
             <h3>Nuestros Productos</h3>
@@ -49,14 +52,14 @@
 
         <div>
             <h3>PREGUNTAS LAB 1</h3>
-            <table>
+            <table class="border-separate">
                <thead>
                     <tr>
-                        <th>PREGUNTA</th>
-                        <th>RESPUESTA</th>
+                        <th class="bg-lime-800/75">PREGUNTA</th>
+                        <th class="bg-lime-800/75">RESPUESTA</th>
                     </tr>
                </thead>
-                <tbody>
+                <tbody class="bg-lime-800/50">
                     <tr>
                         <td class="azul">¿Cuál es la diferencia entre Internet y la World Wide Web?</td>
                         <td  id="respuesta">El internet es una red global de computadoras interconectadas en todo el mundo, mientras que la Web es una colección de páginas dentro de una red. La Web necesita del internet para acceder a la información. https://www.bbc.com/mundo/noticias-47538812</td>
@@ -126,7 +129,7 @@
                     </tr>
                     <tr>
                         <td class="azul">¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</td>
-                        <td id="respuesta"><img src="/CSTD/html5_Edge.jpg" width="300"> </td>
+                        <td id="respuesta"><img src="../Imagenes/html5_Edge.jpg" width="300"> </td>
                     </tr>
                     <tr>
                         <td class="azul">El ciclo de vida y desarrollo de los sistemas de información:</td>
@@ -141,18 +144,67 @@
         </div>
         <div class="blueyP mt-5">
             <h2>PREGUNTAS LAB. 3</h2>
-            <h3>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de ”!important”</h3>
+            <h3 class="text-xl font-bold">Como ingeniero de software ¿cuál es tu recomendación sobre el uso de ”!important”</h3>
             <p>Creo que no es lo ideal ocuparlo, pero si un grupo de etiquetas tienen el mismo estilo pero quieres que alguna en específico tenga algo diferente sin afectar las otras, se puede ocupar “!important” para priorizar ese cambio individual y dejar en segundo las grupales.</p>
-            <h3>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</h3>
+            <h3 class="text-xl font-bold">Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</h3>
             <p>El tamaño de la imagen es importante para que se vea bien, también si la página se abre en un dispositivo con diferentes medidas la imagen puede sufrir cambios.</p>
-            <h3>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</h3>
-            <p>Creo que es depende de para que se ocupen, yo creo que debería de ser algo así:
+            <h3 class="text-xl font-bold">Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</h3>
+            <p >Creo que es depende de para que se ocupen, yo creo que debería de ser algo así:
             <br>% para diseños flexibles y responsivos.
             <br>px para tamaños precisos en la pantalla.
             <p>pt siento que es el que menos se debe de usar, recomendaría cambiarlo a px.</p>
-            <h3>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</h3>
+            <h3 class="text-xl font-bold">¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</h3>
             <p>Es una buena práctica el minimizar el CSS para eliminar espacios o líneas innecesarias, evitar guardar caché en ese archivo y  para que el sitio web sea más fluido.</p>
         </div>
+
+        <div class="mt-5">            
+            <h3>PREGUNTAS LAB 4</h3>            
+            <ol class="space-y-4 text-gray-500 list-decimal list-inside dark:text-lime-900">
+                <li>
+                    ¿Qué diferencias y semejanzas hay entre Java y JavaScript?
+                <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+                    <li><strong >Diferencias.</strong> Java es compilado y se ocupa más para orientado a objetos, mientras que JavaScript es interpretado y se usa del lado del cliente en páginas web. Java es tipado estáticamente, mientras que JavaScript es tipado dinámicamente.</li>
+                    <li><strong>Semejanzas.</strong> Tienen algunas similitudes en la sintaxis y el usar objetos. Ambos se utilizan en el desarrollo web, pero Java se utiliza en el backend, mientras que JavaScript se usa en el frontend.</li>
+                </ul>
+                </li>
+                <li>
+                    ¿Qué métodos tiene el objeto Date? 
+                <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+                    <li><strong>getMonth().</strong> Devuelve el número del mes, pero enero es 0 y diciembre es 11.</li>
+                    <li><strong>getDate().</strong> Regresa el día del mes, en un rango de 1 a 31.</li>
+                    <li><strong>getDay().</strong> Nos da el día de la semana, siendo domingo un 0 y sábado 6.</li>
+                    <li><strong>getHours().</strong> Devuelve la hora actual en un formato de 24 horas.</li>
+                    <li><strong>getMinutes().</strong> Retorna los minutos actuales.</li>
+                </ul>
+                </li>
+                <li>
+                ¿Qué métodos tienen los arreglos? 
+                <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+                    <li><strong>push().</strong> Agrega el elemento al final del arreglo.</li>
+                    <li><strong>unshift().</strong> Agrega un elemento al inicio del arreglo.</li>
+                    <li><strong>pop().</strong> Elimina el último elemento del arreglo.</li>
+                    <li><strong>shift().</strong> Elimina el primer elemento del arreglo.</li>
+                    <li><strong>slice().</strong> Copia todo o una sección de un arreglo.</li>
+                </ul>
+                </li>
+                <li>
+                    ¿Cómo se declara una variable con alcance local dentro de una función?
+                    <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+                        <li>Se utiliza let o const. “let variableLocal = “Soy una variable local”;”</li>
+                    </ul>
+                </li>   
+                <li>
+                    ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
+                    <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+                        <li>Es muy recomendable usar variables locales dentro de las funciones que sea posible, esto ayuda al mantenimiento y la legibilidad del código.</li>
+                    </ul>
+                </li>   
+            
+            </ol>
+ 
+        </div>
+
+
 
         <div class="flex items-center justify-center botonContacto">
             <button class="open-button bg-blue-800 py-1.5 px-14 mb-2 mt-4 " id="open-button"> CONTACTO </button>

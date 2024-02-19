@@ -7,9 +7,13 @@ body{
     padding: 4em 1em;
 }
 
-h2{
-    margin-top: 1em;
-    padding-top: 1em;
+h3{
+    color:#265c37;
+}
+
+p{
+    color:#334a7e;
+
 }
 
 th{
@@ -24,6 +28,7 @@ td{
 .azul{
     background-color: #74c69d;
     width: 300px;
+    
 }
 
 .derecha{
@@ -37,9 +42,10 @@ td{
     padding-left: 1em;
 }
 
+
 /*DELECTOR DE ID*/
 #respuesta{
-    color:#382b53aa
+    background-color: #b7e4c7;
 }
 
 .open-button {
