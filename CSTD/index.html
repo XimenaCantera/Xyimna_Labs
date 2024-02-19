@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Introducción a las aplicaciones web</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="estilos.css">
+        <title>Introducción a las aplicaciones web</title>
+        
     </head>
-    <body>
+    <body class="m-auto">
         <div>
             <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/241087326_1559743931042306_7376873698654842302_n.png?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeH1QMmnnlcXnuT1iw3MKxug8ljJnbZuJ2HyWMmdtm4nYcLqVcTz1nzivUpvj-UTK2WsKpKwI0oLdyB9DSGSm1eI&_nc_ohc=UEFbOO8WTS0AX9uZ-AG&_nc_ht=scontent-dfw5-1.xx&oh=00_AfAdlHpZcNE_0Tgjrv1SZby95FWNblcFKe6ylkE9R6CLXA&oe=65D2A1D2" class="derecha">
             <h2>Bienvenidos a Peletería Cantera Reséndiz</h2>
@@ -122,7 +126,7 @@
                     </tr>
                     <tr>
                         <td class="azul">¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</td>
-                        <td id="respuesta"><img src="C:\Users\Cantera Resendiz\Desktop\Software2024\Xyimna_Labs\CSTD\html5_Edge.jpg" width="300"> </td>
+                        <td id="respuesta"><img src="/CSTD/html5_Edge.jpg" width="300"> </td>
                     </tr>
                     <tr>
                         <td class="azul">El ciclo de vida y desarrollo de los sistemas de información:</td>
@@ -135,7 +139,7 @@
 
             </table>
         </div>
-        <div class="blueyP">
+        <div class="blueyP mt-5">
             <h2>PREGUNTAS LAB. 3</h2>
             <h3>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de ”!important”</h3>
             <p>Creo que no es lo ideal ocuparlo, pero si un grupo de etiquetas tienen el mismo estilo pero quieres que alguna en específico tenga algo diferente sin afectar las otras, se puede ocupar “!important” para priorizar ese cambio individual y dejar en segundo las grupales.</p>
@@ -150,11 +154,32 @@
             <p>Es una buena práctica el minimizar el CSS para eliminar espacios o líneas innecesarias, evitar guardar caché en ese archivo y  para que el sitio web sea más fluido.</p>
         </div>
 
+        <div class="flex items-center justify-center botonContacto">
+            <button class="open-button bg-blue-800 py-1.5 px-14 mb-2 mt-4 " id="open-button"> CONTACTO </button>
+            <div class="window-background" id="window-background">
+                <div class="window-container bg-slate-950" id="window-container">
+                    <button class="close-button" id="close-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="icon-x">
+                            <path 
+                                d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+                            </path>
+                        </svg>
+                    </button>
+                    <h2 class="flex items-center justify-center text-4xl font-bold text-white mb-4">Datos de Contacto</h2>
+                    <div class="flex justify-center">
+                        <svg class="fill-white mr-1.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10c1.466 0 2.961-.371 4.442-1.104l-.885-1.793C14.353 19.698 13.156 20 12 20c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8v1c0 .692-.313 2-1.5 2-1.396 0-1.494-1.819-1.5-2V8h-2v.025A4.954 4.954 0 0 0 12 7c-2.757 0-5 2.243-5 5s2.243 5 5 5c1.45 0 2.748-.631 3.662-1.621.524.89 1.408 1.621 2.838 1.621 2.273 0 3.5-2.061 3.5-4v-1c0-5.514-4.486-10-10-10zm0 13c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3z"></path></svg>
+                        <p class="font-semibold text-white flex justify-center">A01277310@tec.mx</p>
+                    </div>
+                    <div class="flex justify-center">
+                        <svg class="fill-white mr-1.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z"></path></svg>
+                        <p class="font-semibold text-white flex justify-center">771 123 4567</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
 
-
-
-
-        <script src="intro_js.js"></script>
+        <script src="../js/lab4.js"></script>
     </body>
 
 </html>

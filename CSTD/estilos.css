@@ -42,3 +42,71 @@ td{
     color:#382b53aa
 }
 
+.open-button {
+    color: white;
+    border: none;
+    transition: transform .3 cubic-bezier(.36, .37, .76, .75);
+    cursor: pointer;
+}
+
+.open-button:active {
+    transform: scale(.95);
+}
+
+.window-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(0.25em);
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.window-container {
+    position: relative;
+    width: 34.375em;
+    height: auto;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    animation-name: modal;
+    animation-duration: .5s;
+    box-shadow: 0 0.313em 0.938em -0.313em rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+@keyframes modal {
+    from {
+        transform: translateY(50vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.close {
+    transition: transform 1s cubic-bezier(0, -0.42, 1, -0.41);
+    transform: translateY(60vh);
+}
+
+.close-button {
+    position: absolute;
+    border-radius: 50%;
+    top: -0.938em;
+    right: -0.938em;
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.063em solid #eee;
+    cursor: pointer;
+    background-color: #eee;
+}
+
