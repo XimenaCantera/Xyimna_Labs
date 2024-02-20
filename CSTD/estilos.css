@@ -26,14 +26,12 @@ td{
 
 /*SELECTOR DE CLASE*/
 .azul{
-    background-color: #74c69d;
+    background-color: rgb(245 158 11);
     width: 300px;
-    
 }
 
 .derecha{
     float: right;
-    
 }
 
 .blueyP{
@@ -45,7 +43,7 @@ td{
 
 /*DELECTOR DE ID*/
 #respuesta{
-    background-color: #b7e4c7;
+    background-color: rgb(251 191 36);
 }
 
 .open-button {
