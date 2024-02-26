@@ -16,20 +16,5 @@ const windowBackground = document.getElementById('window-background'),
 
         closeButton.addEventListener('click', () => closeWindow())
 
-        window.addEventListener('click', e => e.target == windowBackground && closeWindow())
+        window.addEventListener('click', e => e.target == windowBackground && closeWindow())
 
-
-
-        // Función para abrir el modal y mostrar la imagen
-    function openModal(imgSrc) {
-        var modal = document.getElementById("myModal");
-        var modalImg = document.getElementById("modalImg");
-        modal.style.display = "block"; // Mostrar el modal
-        modalImg.src = imgSrc; // Establecer la imagen del modal
-    }
-
-    // Función para cerrar el modal
-    function closeModal() {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none"; // Ocultar el modal
-    }
