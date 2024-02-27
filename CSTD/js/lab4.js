@@ -18,3 +18,4 @@ const windowBackground = document.getElementById('window-background'),
 
         window.addEventListener('click', e => e.target == windowBackground && closeWindow())
 
+
