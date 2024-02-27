@@ -15,17 +15,16 @@ const server = http.createServer( (request, response) => {
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script src="https://cdn.tailwindcss.com"></script>
-            <link rel="stylesheet" href="estilos.css">
             <title>Master Shoes web</title>
         </head>
         
-        <body class="max-w-m m-auto">
+        <body class="max-w-m m-auto Helvica">
             <!--TODO  NAVBAR-->
             <div>
                 <nav class="bg-white dark:bg-red-900">
                     <div class="flex justify-between mx-auto p-4">
                         <div class="flex items-center space-x-3 rtl:space-x-reverse">
-                            <img src="/CSTD/Imagenes/Logo_MasterShoes.png" class="h-8"/>
+                            <img src="Logo_MasterShoes.png" class="h-8"/>
                             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Master Shoes</span>
                         </div>
                         <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
