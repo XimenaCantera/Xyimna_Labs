@@ -7,9 +7,20 @@ filesystem.writeFileSync('node.txt', 'Hola desde node');
 //todo CREAR SERVIDOR
 const http = require('http');
 
+
 const server = http.createServer((request, response) => {
     console.log(request);
     //console.setHeader('Content-Type', 'text/html');
+    if(request.url == "/"){
+        response.setHeader('content-Type', 'text/html');
+        response.write('');
+
+
+        response.end();
+    }else{
+        response.statusCode = 404;
+        response.end();
+    }
 
 });
  
