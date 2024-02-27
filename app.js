@@ -11,7 +11,6 @@ const html_header = `
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script src="https://cdn.tailwindcss.com"></script>
-            <link rel="stylesheet" href="estilos.css">
             <title>Master Shoes web</title>
         </head>
         
@@ -91,7 +90,7 @@ const html_footer = `
                         <a class="hover:underline">mastershoespr@gmail.com </a>
                     </li>
                     <li class="mb-4">
-                        <a  class="hover:underline">Teléfono: (55) 1234-5678</a>
+                        <a  class="hover:underline">Teléfono: 55+ 1234-5678</a>
                     </li>
                     <li class="mb-4">
                         <a href="https://www.instagram.com/mastershoespr?igsh=a2VraWVkbzF5Nmdl" class="hover:underline">Instagram</a>
@@ -239,27 +238,25 @@ const server = http.createServer( (request, response) => {
 
             
                 <script>
-                        const windowBackground = document.getElementById('window-background'),
-                        windowContainer = document.getElementById('window-container'),
-                        openButton = document.getElementById('open-button'),
-                        closeButton = document.getElementById('close-button')
-                    
-                    openButton.addEventListener('click', () => windowBackground.style.display = 'flex')
-            
-                    const closeWindow = () => {
-                        windowContainer.classList.add('close')
-            
-                        setTimeout(() => {
-                            windowContainer.classList.remove('close')
-                            windowBackground.style.display = 'none'
-                        }, 1000)
-                    }
-            
-                    closeButton.addEventListener('click', () => closeWindow())
-            
-                    window.addEventListener('click', e => e.target == windowBackground && closeWindow())
-            
-            
+                    const windowBackground = document.getElementById('window-background'),
+                    windowContainer = document.getElementById('window-container'),
+                    openButton = document.getElementById('open-button'),
+                    closeButton = document.getElementById('close-button')
+                
+                openButton.addEventListener('click', () => windowBackground.style.display = 'flex')
+        
+                const closeWindow = () => {
+                    windowContainer.classList.add('close')
+        
+                    setTimeout(() => {
+                        windowContainer.classList.remove('close')
+                        windowBackground.style.display = 'none'
+                    }, 1000)
+                }
+        
+                closeButton.addEventListener('click', () => closeWindow())
+        
+                window.addEventListener('click', e => e.target == windowBackground && closeWindow());
     
                 </script>
             </body>

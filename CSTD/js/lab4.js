@@ -6,16 +6,14 @@ const windowBackground = document.getElementById('window-background'),
         openButton.addEventListener('click', () => windowBackground.style.display = 'flex')
 
         const closeWindow = () => {
-            windowContainer.classList.add('close')
+            windowContainer.classList.add('close');
 
             setTimeout(() => {
                 windowContainer.classList.remove('close')
                 windowBackground.style.display = 'none'
-            }, 1000)
+            }, 1000);
         }
 
-        closeButton.addEventListener('click', () => closeWindow())
+        closeButton.addEventListener('click', () => closeWindow());
 
-        window.addEventListener('click', e => e.target == windowBackground && closeWindow())
-
-
+        window.addEventListener('click', e => e.target == windowBackground && closeWindow())
