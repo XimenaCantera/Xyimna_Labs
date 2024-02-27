@@ -1,0 +1,3 @@
+# Ignora los archivos y/o documentos que no queremos mandar al repositorio
+
+node_modules/
