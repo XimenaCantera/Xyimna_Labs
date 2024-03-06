@@ -106,16 +106,17 @@ const trabajadores = [
     Local: "av. boulevard pricnipal cd.48083",
 }];
 
-const http = require('http');
+const express = require('express');
+const app = express();
 
-const server = http.createServer( (request, response) => {    
-    console.log(request.url);
+// TODO USANDO MIDDLEWARE
+app.use((request, response, next) => {
+    next();
+});
 
-    if (request.url == "/") {
-
-        response.setHeader('Content-Type', 'text/html');
-        response.write(html_header);
-        response.write(`
+app.get('/', (request, response, next) => {
+    let html = html_header;
+    html += `
         <div class="relative flex bg-clip-border rounded-xl bg-[#E48F45]/65 text-black shadow-md w-full flex-row">
             <div class="items-center justify-center relative w-2/5 m-0 overflow-hidden text-gray-700 bg-[#E48F45]/65 rounded-r-none bg-clip-border rounded-xl shrink-0">
                 <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t1.6435-9/84355621_1107165882966782_2005786651065843712_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c2f564&_nc_eui2=AeH0y3__G0BbFFNLgVHOLmFQtckrNC-k0261ySs0L6TTbt6XZDwwDRWjSLELfDqYjbNJ1dXnMbIzqVrvrI0LKlU6&_nc_ohc=XmY1dYtC_uYAX-rMgut&_nc_ht=scontent-dfw5-2.xx&oh=00_AfD2thqmakiEwuCNQttitvL6uFziq3uCLFoX_53OpmJJZQ&oe=6605D4EC" alt="card-image" class="object-cover w-96 my-10 ml-24 rounded-lg"/>
@@ -202,33 +203,49 @@ const server = http.createServer( (request, response) => {
             <hr class="mt-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
 
             <h1 class="flex items-center justify-center my-16 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-black">Equipo de trabajo</h1>
+    `;
 
-        `);
+    html += `
+        <div class="grid grid-cols-4 gap-4">
+    `;
 
-        let html_trabajadores = `
-            <div class="grid grid-cols-4 gap-4">
-        `;
-
-        for (let trabajador of trabajadores) {
-            html_trabajadores += `                
-                <div class="w-full max-w-sm border border-gray-200 rounded-lg shadow bg-[#E48F45]">
-                    <div class="flex flex-col items-center pb-10">
-                       <h5 class="mb-1 text-xl font-medium dark:text-white">${trabajador.Nombre}</h5>
-                        <span class="text-sm dark:text-black">${trabajador.Area}</span>
-                        <span class="text-sm dark:text-black">${trabajador.Correo}</span>
-                        <span class="text-sm dark:text-black">${trabajador.Local}</span>
-                    </div>
+    for (let trabajador of trabajadores) {
+        html += `                
+            <div class="w-full max-w-sm border border-gray-200 rounded-lg shadow bg-[#E48F45]">
+                <div class="flex flex-col items-center pb-10">
+                   <h5 class="mb-1 text-xl font-medium dark:text-white">${trabajador.Nombre}</h5>
+                    <span class="text-sm dark:text-black">${trabajador.Area}</span>
+                    <span class="text-sm dark:text-black">${trabajador.Correo}</span>
+                    <span class="text-sm dark:text-black">${trabajador.Local}</span>
                 </div>
-            `;
-        }
-
-        html_trabajadores += `
             </div>
         `;
+    }
 
-        response.write(html_trabajadores);
-        response.write(html_footer);
-        response.end();
+    html += `
+        </div>
+    `;
+
+    //response.write(html_trabajadores);
+    html += html_footer;
+    response.send(html);
+});
+
+app.use((request, response, next) => {
+    response.status(404);
+    let html = html_header;
+    html += `<h2 class="title">Proximamente...</h2>`;
+    html += html_footer;
+    response.send(html);
+});
+
+/*
+const server = http.createServer( (request, response) => {    
+    
+
+    if (request.url == "/") {
+
+       
 
     } else if(request.url == "/Agregar" && request.method == "GET"){
         response.setHeader('Content-Type', 'text/html');
@@ -496,13 +513,8 @@ const server = http.createServer( (request, response) => {
         response.write(html_footer);
         response.end();
     } else{
-        response.statusCode = 404;
-        response.setHeader('content-Type', 'text/html');
-        response.write(html_header);
-        response.write(`<h2 class="title">Proximamente...</h2>`);
-        response.write(html_footer);
-        response.end();
+       
     }
 });
-
-server.listen(1200);
+*/
+app.listen(1200);
