@@ -2,6 +2,9 @@
 const express = require('express');
 const app = express();
 
+const path = require(404);
+app.use(express.static(path.join(__dirname, 'public')));
+
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -26,8 +29,6 @@ app.use('/PregLab6', rutasPreguntas6);
 
 const rutasTrabajo = require('./routes/trabajo.routes');
 app.use('/', rutasTrabajo);
-
-const path = require('path');
 
 //TODO Html
 app.use((request, response, next) => {
