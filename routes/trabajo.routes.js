@@ -254,12 +254,4 @@ router.get('/', (request, response, next) => {
     response.send(html);
 });
 
-router.use((request, response, next) => {
-    response.status(404);
-    let html = html_header;
-    html += `<h2 class="title">Proximamente...</h2>`;
-    html += html_footer;
-    response.send(html);
-});
-
 module.exports = router;

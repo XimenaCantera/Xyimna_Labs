@@ -27,6 +27,12 @@ app.use('/PregLab6', rutasPreguntas6);
 const rutasTrabajo = require('./routes/trabajo.routes');
 app.use('/', rutasTrabajo);
 
+const path = require('path');
 
+//TODO Html
+app.use((request, response, next) => {
+    response.status(404);
+    response.sendFile(path.join(__dirname, 'views', '404.html'));
+});
 
 app.listen(1200);

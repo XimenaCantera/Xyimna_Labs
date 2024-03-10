@@ -188,13 +188,4 @@ router.get('/', (request, response, next) => {
     response.send(html);
 });
 
-
-/*router.get('/', (request, response, next) => {
-    let html = html_header;
-    html +=;
-
-    html += html_footer;
-    response.send(html);
-});*/
-
 module.exports = router;
