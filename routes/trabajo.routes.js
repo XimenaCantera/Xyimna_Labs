@@ -3,7 +3,7 @@ const router = express.Router();
 
 const html_header = `
     <!DOCTYPE html>
-    <html>
+    <html> 
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,6 @@ const html_header = `
                         <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
                             <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Login</a>
                             <a href="#" class="text-white bg-amber-400 hover:bg-orange-600 focus:ring-4 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600">Sign up</a>
-                            
                         </div>
                     </div>
                 </nav>
@@ -88,7 +87,6 @@ const html_footer = `
             </footer>
         </body>
     </html>
-    
 `;
 
 const trabajadores = [
@@ -146,6 +144,7 @@ router.post('/Agregar', (request, response, next) => {
     response.redirect('/');
 });
 
+
 router.get('/', (request, response, next) => {
     let html = html_header;
     html += `
@@ -168,74 +167,68 @@ router.get('/', (request, response, next) => {
                 </p>
                 <a href="/Agregar" class="text-white bg-amber-400 hover:bg-orange-600 focus:ring-4 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600">Agrega trabajadores</a>
             </div>
-
         </div> 
-            <hr class="mt-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" /><br>
-            <!--tODO  FILTRO-->
-            <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
-                <a type="button" class="text-white hover:text-white border border-bg-amber-900 bg-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-orange-400 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-bg-amber-700 dark:text-white dark:hover:text-white dark:hover:bg-amber-400 dark:bg-amber-700">Todo</a>
-                <a type="button" href="#" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Servicios</a>
-                <a type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Productos</a>
-            </div>
-
-            <!--TODO NUEVO DISEÑO DE PRODUCTOS Y SERVICIOS-->
-            <div class="grid grid-cols-3 gap-5">
-                <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-red-900 ml-11">
+        <hr class="mt-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" /><br>
+        <!--tODO  FILTRO-->
+        <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+            <a type="button" class="text-white hover:text-white border border-bg-amber-900 bg-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-orange-400 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-bg-amber-700 dark:text-white dark:hover:text-white dark:hover:bg-amber-400 dark:bg-amber-700">Todo</a>
+            <a type="button" href="#" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Servicios</a>
+            <a type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Productos</a>
+        </div>
+        <!--TODO NUEVO DISEÑO DE PRODUCTOS Y SERVICIOS-->
+        <div class="grid grid-cols-3 gap-5">
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-red-900 ml-11">
+                <a href="#">
+                    <img class="p-8 rounded-t-lg" src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/242537897_1569292223420810_1656489833131288913_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeFVgI64jinF5ZchZcxWZhmOfWdE1i8gyRV9Z0TWLyDJFeqMi4BD1uhcua31p7TaJkv5oFywqjHDTU9mMwn4fej5&_nc_ohc=SUmWBapsUgoAX-3jAxz&_nc_ht=scontent-dfw5-1.xx&oh=00_AfBpinsEnkkd-wwwmAT6C4KTn5_P85rH97uwhhX069MRfw&oe=65E42DD5" alt="product image" />
+                </a>
+                <div class="px-5 pb-5">
                     <a href="#">
-                        <img class="p-8 rounded-t-lg" src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/242537897_1569292223420810_1656489833131288913_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeFVgI64jinF5ZchZcxWZhmOfWdE1i8gyRV9Z0TWLyDJFeqMi4BD1uhcua31p7TaJkv5oFywqjHDTU9mMwn4fej5&_nc_ohc=SUmWBapsUgoAX-3jAxz&_nc_ht=scontent-dfw5-1.xx&oh=00_AfBpinsEnkkd-wwwmAT6C4KTn5_P85rH97uwhhX069MRfw&oe=65E42DD5" alt="product image" />
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Reparaciones de productos de piel</h5>
                     </a>
-                    <div class="px-5 pb-5">
-                        <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Reparaciones de productos de piel</h5>
-                        </a>
-                        <div class="flex items-center mt-2.5 mb-5">
-                            
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-                            <a href="/Presupuesto" class="text-white dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Realizar presupuesto</a>
-                        </div>
+                    <div class="flex items-center mt-2.5 mb-5">
                     </div>
-                </div>
-                <div class="mx-4 rounded-lg shadow dark:bg-red-900">
-                    <a href="#">
-                        <img class="p-8 rounded-t-lg" src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/312066103_987718562145825_1707666995852869215_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeEilK4Bk-cQjoLyooTjuNSYjFbDLPpOKUuMVsMs-k4pS_T0blvOazzmqzUUlD7EPylPcDwN4ZcoSIw8ZIfQMaOy&_nc_ohc=SSG_GfZ5ZtcAX-l1l3L&_nc_ht=scontent-dfw5-1.xx&oh=00_AfCMs95fkm1W5-cIGJ-PmYqBdAyH4a9xJEX5dfhJrX-nrw&oe=65E2979B"/>
-                    </a>
-                    <div class="px-5 pb-5">
-                        <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Mantenimiento en zapatos y accesorios</h5>
-                        </a>
-                        <div class="flex items-center mt-2.5 mb-5">
-                            
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-                            <a href="#" class="text-white dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Realizar presupuesto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rounded-lg shadow dark:bg-red-900 mr-11">
-                    <a href="#">
-                        <img class="p-8 rounded-t-lg" src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/312066103_987718562145825_1707666995852869215_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeEilK4Bk-cQjoLyooTjuNSYjFbDLPpOKUuMVsMs-k4pS_T0blvOazzmqzUUlD7EPylPcDwN4ZcoSIw8ZIfQMaOy&_nc_ohc=SSG_GfZ5ZtcAX-l1l3L&_nc_ht=scontent-dfw5-1.xx&oh=00_AfCMs95fkm1W5-cIGJ-PmYqBdAyH4a9xJEX5dfhJrX-nrw&oe=65E2979B"/>
-                    </a>
-                    <div class="px-5 pb-5">
-                        <a href="#">
-                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Mantenimiento en zapatos y accesorios</h5>
-                        </a>
-                        <div class="flex items-center mt-2.5 mb-5">
-                            
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-                            <a href="#" class="text-white dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Realizar presupuesto</a>
-                        </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                        <a href="/Presupuesto" class="text-white dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Realizar presupuesto</a>
                     </div>
                 </div>
             </div>
-            <hr class="mt-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
-
-            <h1 class="flex items-center justify-center my-16 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-black">Equipo de trabajo</h1>
-    `;
+            <div class="mx-4 rounded-lg shadow dark:bg-red-900">
+                <a href="#">
+                    <img class="p-8 rounded-t-lg" src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/312066103_987718562145825_1707666995852869215_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeEilK4Bk-cQjoLyooTjuNSYjFbDLPpOKUuMVsMs-k4pS_T0blvOazzmqzUUlD7EPylPcDwN4ZcoSIw8ZIfQMaOy&_nc_ohc=SSG_GfZ5ZtcAX-l1l3L&_nc_ht=scontent-dfw5-1.xx&oh=00_AfCMs95fkm1W5-cIGJ-PmYqBdAyH4a9xJEX5dfhJrX-nrw&oe=65E2979B"/>
+                </a>
+                <div class="px-5 pb-5">
+                    <a href="#">
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Mantenimiento en zapatos y accesorios</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                        <a href="#" class="text-white dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Realizar presupuesto</a>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-lg shadow dark:bg-red-900 mr-11">
+                <a href="#">
+                    <img class="p-8 rounded-t-lg" src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/312066103_987718562145825_1707666995852869215_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeEilK4Bk-cQjoLyooTjuNSYjFbDLPpOKUuMVsMs-k4pS_T0blvOazzmqzUUlD7EPylPcDwN4ZcoSIw8ZIfQMaOy&_nc_ohc=SSG_GfZ5ZtcAX-l1l3L&_nc_ht=scontent-dfw5-1.xx&oh=00_AfCMs95fkm1W5-cIGJ-PmYqBdAyH4a9xJEX5dfhJrX-nrw&oe=65E2979B"/>
+                </a>
+                <div class="px-5 pb-5">
+                    <a href="#">
+                        <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Mantenimiento en zapatos y accesorios</h5>
+                    </a>
+                    <div class="flex items-center mt-2.5 mb-5">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                        <a href="#" class="text-white dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Realizar presupuesto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
+        <h1 class="flex items-center justify-center my-16 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-black">Equipo de trabajo</h1>
+`;
 
     html += `
         <div class="grid grid-cols-4 gap-4">
@@ -257,8 +250,6 @@ router.get('/', (request, response, next) => {
     html += `
         </div>
     `;
-
-    //response.write(html_trabajadores);
     html += html_footer;
     response.send(html);
 });
