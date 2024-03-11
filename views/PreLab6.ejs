@@ -1,0 +1,33 @@
+<!--? Agregar partials para head -->
+<%- include('includes/head.ejs') %>
+
+<div class="mx-60 my-20>            
+    <h3>PREGUNTAS LAB 6</h3>            
+    <ol class="space-y-4 text-gray-500 list-decimal list-inside dark:text-lime-900">
+        <li>
+            ¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?
+        <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+            <li><strong >Validación del cliente.</strong> Evita errores y proporciona retroalimentación inmediata al usario.</li>
+            <li><strong>Mejora la usabilidad.</strong> Ayuda a los usuarios a corregir problemas rápidamente.</li>
+            <li><strong>Menos carga en el servidor.</strong> Reduce solicitudes al servidor.</li>
+        </ul>
+        </li>
+        <li>
+            ¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?
+        <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+            <li><strong>Desactivar JavaSript.</strong> Es poco común, pero es posible.</li>
+            <li><strong>Manipulación del código fuente.</strong> Requiere acceso al código.</li>
+            <li><strong>Envío directo al servidor.</strong> Sin pasar por validación en el cliente.</li>
+        </ul>
+        </li>
+        <li>
+        Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica? 
+        <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+            <li>A pesar de las vulnerabilidades, mejora la experiencia y cumple con los estándares. Siempre complementando con validaciones en el servidor.</li>
+        </ul>
+        </li>
+    </ol>
+</div>
+
+<!--? Agregar partials para footer -->
+<%- include('includes/foot.ejs') %>

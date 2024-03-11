@@ -1,0 +1,20 @@
+<!--? Agregar partials para head -->
+<%- include('includes/head.ejs') %>
+
+<div class="mx-60 my-20">
+    <h2>PREGUNTAS LAB. 3</h2>
+    <h3 class="text-xl font-bold">Como ingeniero de software ¿cuál es tu recomendación sobre el uso de ”!important”</h3>
+    <p>Creo que no es lo ideal ocuparlo, pero si un grupo de etiquetas tienen el mismo estilo pero quieres que alguna en específico tenga algo diferente sin afectar las otras, se puede ocupar “!important” para priorizar ese cambio individual y dejar en segundo las grupales.</p>
+    <h3 class="text-xl font-bold">Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</h3>
+    <p>El tamaño de la imagen es importante para que se vea bien, también si la página se abre en un dispositivo con diferentes medidas la imagen puede sufrir cambios.</p>
+    <h3 class="text-xl font-bold">Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</h3>
+    <p >Creo que es depende de para que se ocupen, yo creo que debería de ser algo así:
+    <br>% para diseños flexibles y responsivos.
+    <br>px para tamaños precisos en la pantalla.
+    <p>pt siento que es el que menos se debe de usar, recomendaría cambiarlo a px.</p>
+    <h3 class="text-xl font-bold">¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</h3>
+    <p>Es una buena práctica el minimizar el CSS para eliminar espacios o líneas innecesarias, evitar guardar caché en ese archivo y  para que el sitio web sea más fluido.</p>
+</div>
+
+<!--? Agregar partials para footer -->
+<%- include('includes/foot.ejs') %>

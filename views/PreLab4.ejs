@@ -1,0 +1,50 @@
+<!--? Agregar partials para head -->
+<%- include('includes/head.ejs') %>
+
+<div class="mx-60 my-20">            
+    <h3>PREGUNTAS LAB 4</h3>            
+    <ol class="space-y-4 text-gray-500 list-decimal list-inside dark:text-lime-900">
+        <li>
+            ¿Qué diferencias y semejanzas hay entre Java y JavaScript?
+        <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+            <li><strong >Diferencias.</strong> Java es compilado y se ocupa más para orientado a objetos, mientras que JavaScript es interpretado y se usa del lado del cliente en páginas web. Java es tipado estáticamente, mientras que JavaScript es tipado dinámicamente.</li>
+            <li><strong>Semejanzas.</strong> Tienen algunas similitudes en la sintaxis y el usar objetos. Ambos se utilizan en el desarrollo web, pero Java se utiliza en el backend, mientras que JavaScript se usa en el frontend.</li>
+        </ul>
+        </li>
+        <li>
+            ¿Qué métodos tiene el objeto Date? 
+        <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+            <li><strong>getMonth().</strong> Devuelve el número del mes, pero enero es 0 y diciembre es 11.</li>
+            <li><strong>getDate().</strong> Regresa el día del mes, en un rango de 1 a 31.</li>
+            <li><strong>getDay().</strong> Nos da el día de la semana, siendo domingo un 0 y sábado 6.</li>
+            <li><strong>getHours().</strong> Devuelve la hora actual en un formato de 24 horas.</li>
+            <li><strong>getMinutes().</strong> Retorna los minutos actuales.</li>
+        </ul>
+        </li>
+        <li>
+        ¿Qué métodos tienen los arreglos? 
+        <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+            <li><strong>push().</strong> Agrega el elemento al final del arreglo.</li>
+            <li><strong>unshift().</strong> Agrega un elemento al inicio del arreglo.</li>
+            <li><strong>pop().</strong> Elimina el último elemento del arreglo.</li>
+            <li><strong>shift().</strong> Elimina el primer elemento del arreglo.</li>
+            <li><strong>slice().</strong> Copia todo o una sección de un arreglo.</li>
+        </ul>
+        </li>
+        <li>
+            ¿Cómo se declara una variable con alcance local dentro de una función?
+            <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+                <li>Se utiliza let o const. “let variableLocal = “Soy una variable local”;”</li>
+            </ul>
+        </li>   
+        <li>
+            ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
+            <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+                <li>Es muy recomendable usar variables locales dentro de las funciones que sea posible, esto ayuda al mantenimiento y la legibilidad del código.</li>
+            </ul>
+        </li>   
+    </ol>
+</div>
+
+<!--? Agregar partials para footer -->
+<%- include('includes/foot.ejs') %>
