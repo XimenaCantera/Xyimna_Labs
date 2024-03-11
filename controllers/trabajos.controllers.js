@@ -7,7 +7,7 @@ exports.get_agregar = (request, response, next) => {
 exports.post_agregar = (request, response, next) => {
     console.log(request.body);
     const Trabaja = new Trabajador(
-        request.body.nombre, request.body.area, request.body.correo, request.body.local
+        request.body.Nombre, request.body.Area, request.body.Correo, request.body.Local
     );
 
     Trabaja.save();

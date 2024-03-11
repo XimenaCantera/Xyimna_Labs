@@ -13,16 +13,16 @@ const trabajadores = [
     }
 ];
 
-module.exports = class Trabajador {
-    //todo Nuevo objeto para definir propiedades del modelo
-    constructor(nombre, area, correo, local){
-        this.Nombre = nombre;
-        this.Area = area;
-        this.Correo = correo;
-        this.Local = local;
+module.exports = class Trabaja {
+    //todo - Nuevo objeto para definir propiedades del modelo
+    constructor(Nombre, Area, Correo, Local){
+        this.Nombre = Nombre;
+        this.Area = Area;
+        this.Correo = Correo;
+        this.Local = Local;
     }
 
-    //todo Guardar nuevo objeto
+    //todo - Guardar nuevo objeto
     save(){
         trabajadores.push({
             Nombre: this.Nombre,
