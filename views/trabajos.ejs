@@ -97,5 +97,14 @@
     <% } %>
 </div>
 
+<!--! Hacer bonito en semana 5-->
+<% if(lastTrabajador != '') { %> 
+    <div class="my-8">El trabajador novato es: <%= lastTrabajador %>.</div>
+<% } %>
+
+<% if(lastLocal != '') { %> 
+    <div>¡Tengan cuidado trabajadores de <%= lastLocal %>!</div>
+<% } %>
+
 <!--? Agregar partials para footer -->
 <%- include('includes/foot.ejs') %>

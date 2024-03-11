@@ -1,8 +1,7 @@
-
 const express = require('express');
 const app = express();
 
-//TODO Configurar ejs
+//TODO Configurar views
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
@@ -12,13 +11,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 
-// TODO USANDO MIDDLEWARE
+//Todo - USANDO MIDDLEWARE
 app.use((request, response, next) => {
     console.log('Middleware ejecutado');
     next(); 
 });
 
-//Todo Importar rutas
+//Todo - Cookie
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
+//Todo - Importar rutas
 const rutasPreguntas = require('./routes/PregLab1.routes');
 app.use('/PregLab1', rutasPreguntas);
 
@@ -34,7 +37,7 @@ app.use('/PregLab6', rutasPreguntas6);
 const rutasTrabajo = require('./routes/trabajo.routes');
 app.use('/', rutasTrabajo);
 
-//TODO html
+//Todo - html 404
 app.use((request, response, next) => {
     response.status(404);
     response.sendFile(path.join(__dirname, 'views', '404.html'));
