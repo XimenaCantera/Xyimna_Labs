@@ -1,5 +1,5 @@
 <!--? Agregar partials para head -->
-<%- include('includes/head.ejs') %>
+<%- include('includes/head.ejs', {usuNombre:usuNombre}) %>
 
     <div class="py-24" style="background-image: linear-gradient(115deg, #eaa97a, #feece2)">
       <div class="container mx-auto">
@@ -11,19 +11,19 @@
             <p class="mb-4">
               Vamos a crear tu cuenta!
             </p>
-            <form action="/users/login" method="POST">
+            <form action="/user/login" method="POST">
               <div class="grid grid-cols-2 gap-5">
-                <input type="text" placeholder="Nombre" class="border border-gray-400 py-1 px-2">
-                <input type="text" placeholder="Apellido" class="border border-gray-400 py-1 px-2">
+                <input type="text" id="usuNombre" placeholder="Nombre" class="border border-gray-400 py-1 px-2">
+                <input type="text" id="usuApellido" placeholder="Apellido" class="border border-gray-400 py-1 px-2">
               </div>
               <div class="mt-5">
-                <input type="text" placeholder="Email" class="border border-gray-400 py-1 px-2 w-full">
+                <input type="text" id="usuEmail" placeholder="Email" class="border border-gray-400 py-1 px-2 w-full">
               </div>
               <div class="mt-5">
-                <input type="password" placeholder="Contraseña" class="border border-gray-400 py-1 px-2 w-full">
+                <input type="password" id="usuContra" placeholder="Contraseña" class="border border-gray-400 py-1 px-2 w-full">
               </div>
               <div class="mt-5">
-                <input type="password" placeholder="Confirmar contraseña" class="border border-gray-400 py-1 px-2 w-full">
+                <input type="password" id="usuContra2" placeholder="Confirmar contraseña" class="border border-gray-400 py-1 px-2 w-full">
               </div>
               
               <div class="mt-5">
@@ -34,8 +34,3 @@
         </div>
       </div>
     </div>
-
-
-
-
-    

@@ -1,7 +1,9 @@
 const Trabajador = require('../models/trabajo.model');
 
 exports.get_agregar = (request, response, next) => {
-    response.render('agregar');
+    response.render('agregar', {
+        usuNombre: request.session.usuNombre || '',
+    })
 };
 
 exports.post_agregar = (request, response, next) => {
@@ -26,5 +28,7 @@ exports.get_root = (request, response, next) => {
         trabajadores: Trabajador.fetchAll(),
         lastTrabajador: request.cookies.lastTrabajador || '',
         lastLocal: request.cookies.lastLocal || '',
+
+        usuNombre: request.session.usuNombre || '',
     });
 };
