@@ -11,9 +11,10 @@ exports.post_agregar = (request, response, next) => {
     );
 
     Trabajas.save();
-    //todo - Crear Cookie :)
-    response.setHeader('Set-Cookie', 'lastTrabajador=' + Trabajas.Nombre);
-    response.setHeader('Set-Cookie', 'lastLocal=' + Trabajas.Local);
+
+    //todo - Crear Cookie con propiedad HttpOnly  :)
+    response.setHeader('Set-Cookie', 'lastTrabajador=' + Trabajas.Nombre + '; HttpOnly');
+    response.setHeader('Set-Cookie', 'lastLocal=' + Trabajas.Local + '; HttpOnly');
     response.redirect('/');
 };
 

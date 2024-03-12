@@ -1,0 +1,41 @@
+<!--? Agregar partials para head -->
+<%- include('includes/head.ejs') %>
+
+    <div class="py-24" style="background-image: linear-gradient(115deg, #eaa97a, #feece2)">
+      <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto shadow-lg overflow-hidden">
+          <div class="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center shadow-md opacity-80" style="background-image: url('https://i.pinimg.com/736x/a1/0b/32/a10b321ae455336161586d290aab5461.jpg');">
+          </div>
+          <div class="w-full lg:w-1/2 py-16 px-12">
+            <h2  class="text-3xl mb-4">Registrar</h2>
+            <p class="mb-4">
+              Vamos a crear tu cuenta!
+            </p>
+            <form action="/users/login" method="POST">
+              <div class="grid grid-cols-2 gap-5">
+                <input type="text" placeholder="Nombre" class="border border-gray-400 py-1 px-2">
+                <input type="text" placeholder="Apellido" class="border border-gray-400 py-1 px-2">
+              </div>
+              <div class="mt-5">
+                <input type="text" placeholder="Email" class="border border-gray-400 py-1 px-2 w-full">
+              </div>
+              <div class="mt-5">
+                <input type="password" placeholder="Contraseña" class="border border-gray-400 py-1 px-2 w-full">
+              </div>
+              <div class="mt-5">
+                <input type="password" placeholder="Confirmar contraseña" class="border border-gray-400 py-1 px-2 w-full">
+              </div>
+              
+              <div class="mt-5">
+                <button class="w-full bg-orange-600 hover:bg-amber-400 py-3 text-center text-white">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    
