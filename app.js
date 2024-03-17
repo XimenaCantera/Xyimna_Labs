@@ -46,7 +46,7 @@ const rutasPreguntas6 = require('./routes/PregLab6.routes');
 app.use('/PregLab6', rutasPreguntas6);
 
 const rutasTrabajo = require('./routes/trabajo.routes');
-app.use('/', rutasTrabajo);
+app.use('/trabajadores', rutasTrabajo);
 
 //Todo - html 404
 app.use((request, response, next) => {
