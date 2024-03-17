@@ -1,38 +1,38 @@
-const trabajadores = [
-    {
-        Nombre: "Ximena Cantera",
-        Area: "Reparación",
-        Correo: "xyimna@gmail.com",
-        Local: "av.centro cd.48023",
-    },
-    {
-        Nombre: "Yael Cortés",
-        Area: "Mantenimiento",
-        Correo: "yao@gmail.com",
-        Local: "av. boulevard pricnipal cd.48083",
-    }
-];
+//todo - BASE DE DATOS
+const db = require('../util/database');
 
-module.exports = class Trabaja {
+module.exports = class Trabajador {
     //todo - Nuevo objeto para definir propiedades del modelo
-    constructor(Nombre, Area, Correo, Local){
+    constructor(Nombre, Correo, Local) {
         this.Nombre = Nombre;
-        this.Area = Area;
         this.Correo = Correo;
         this.Local = Local;
     }
 
     //todo - Guardar nuevo objeto
-    save(){
-        trabajadores.push({
-            Nombre: this.Nombre,
-            Area: this.Area,
-            Correo: this.Correo,
-            Local: this.Local,
-        });
+    save() {
+        return db.execute(
+            `INSERT INTO trabajador (nombre, correo, local) VALUES (?, ?, ?)`,
+            [this.Nombre, this.Correo, this.Local]
+        );
     }
     
-    static fetchAll(){
-        return trabajadores;
+    //todo - Método para recuperar todos los trabajadores de la base de datos
+    static fetchAll() {
+        return db.execute('SELECT * FROM trabajador');
     }
-}
+
+
+    static fetch(id){
+        if(id){
+            return this.fetchOne(id);
+        } else {
+            return this.fetchAll();
+        }
+    }
+
+    //todo - Método para recuperar un trabajador por su ID
+    static fetchOne(id) {
+        return db.execute('SELECT * FROM trabajador WHERE id = ?', [id]);
+    }
+};

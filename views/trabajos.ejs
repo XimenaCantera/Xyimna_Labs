@@ -1,5 +1,5 @@
 <!--? Agregar partials para head -->
-<%- include('includes/head.ejs', {usuNombre:usuNombre}) %>
+<%- include('includes/head.ejs', { usuNombre: usuNombre }) %>
 
 <div class="relative flex bg-clip-border rounded-xl bg-[#E48F45]/65 text-black shadow-md w-full flex-row">
     <div class="items-center justify-center relative w-2/5 m-0 overflow-hidden text-gray-700 bg-[#E48F45]/65 rounded-r-none bg-clip-border rounded-xl shrink-0">
@@ -18,7 +18,7 @@
         <p class="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-black">
             En nuestro taller te podemos pfrecer la mejor solución, contamos con años de experiencia, gusto por la elegancia, exactitud y esmero.
         </p>
-        <a href="/Agregar" class="text-white bg-amber-400 hover:bg-orange-600 focus:ring-4 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600">Agrega trabajadores</a>
+        <a href="/trabajadores/Agregar" class="text-white bg-amber-400 hover:bg-orange-600 focus:ring-4 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600">Agrega trabajadores</a>
     </div>
 </div> 
 <hr class="mt-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" /><br>
@@ -87,8 +87,7 @@
                         
         <div class="w-full max-w-sm border border-gray-200 rounded-lg shadow bg-[#E48F45]">
             <div class="flex flex-col items-center pb-10">
-                <h5 class="mb-1 text-xl font-medium dark:text-white"><%= trabajador.Nombre %></h5>
-                <span class="text-sm dark:text-black"><%= trabajador.Area %></span>
+                <h5 class="mb-1 text-xl font-medium dark:text-white"><a href="/trabajador/<%= trabajador.id %>"><%= trabajador.Nombre %></a> </h5>
                 <span class="text-sm dark:text-black"><%= trabajador.Correo %></span>
                 <span class="text-sm dark:text-black"><%= trabajador.Local %></span>
             </div>
