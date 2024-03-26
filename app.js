@@ -29,6 +29,11 @@ app.use((request, response, next) => {
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
+//Todo - Protección de CSRF
+const csrf = require('csurf');
+const csrfProtection = csrf();
+app.use(csrfProtection); 
+
 //Todo - Importar rutas
 const rutaUser = require('./routes/user.routes');
 app.use('/user', rutaUser);

@@ -11,23 +11,43 @@
             <p class="mb-4">
               Vamos a crear tu cuenta!
             </p>
-            <form action="/user/login" method="POST">
+
+            <h2><%if (registro) {%> 
+              ¡Se parte del equipo de Master Shoes! Solo tienes que registrarte.
+            <%} else { %>
+              Bienvenido
+            <%} %></h2>
+
+
+            <% if(error != '') { %>
+              <div class="notification is-danger">
+                  <strong><%= error %></strong>
+              </div>
+            <% } %>
+
+
+            <form action="/user/<% if (registro) { %>signup<% } else { %>login<% } %>" method="POST">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
               <div class="grid grid-cols-2 gap-5">
                 <input type="text" id="usuNombre" placeholder="Nombre" class="border border-gray-400 py-1 px-2">
                 <input type="text" id="usuApellido" placeholder="Apellido" class="border border-gray-400 py-1 px-2">
               </div>
-              <div class="mt-5">
-                <input type="text" id="usuEmail" placeholder="Email" class="border border-gray-400 py-1 px-2 w-full">
-              </div>
+              <% if (registro) { %>
+                <div class="mt-5">
+                  <input type="text" id="usuEmail" placeholder="Email" class="border border-gray-400 py-1 px-2 w-full">
+                </div>  
+              <% } %>
               <div class="mt-5">
                 <input type="password" id="usuContra" placeholder="Contraseña" class="border border-gray-400 py-1 px-2 w-full">
               </div>
+              <% if (registro) { %>
+                <div class="mt-5">
+                  <input type="password" id="usuContra2" placeholder="Confirmar contraseña" class="border border-gray-400 py-1 px-2 w-full">
+                </div>  
+              <% } %>
+
               <div class="mt-5">
-                <input type="password" id="usuContra2" placeholder="Confirmar contraseña" class="border border-gray-400 py-1 px-2 w-full">
-              </div>
-              
-              <div class="mt-5">
-                <button class="w-full bg-orange-600 hover:bg-amber-400 py-3 text-center text-white">Registrar</button>
+                <button class="w-full bg-orange-600 hover:bg-amber-400 py-3 text-center text-white" value="<% if (registro) { %>¡Unirse!<% } else { %>login<% } %>">Registrar</button>
               </div>
             </form>
           </div>

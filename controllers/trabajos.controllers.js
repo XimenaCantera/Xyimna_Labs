@@ -2,7 +2,8 @@ const Trabajador = require('../models/trabajo.model');
 
 exports.get_agregar = (request, response, next) => {
     response.render('agregar', {
-        usuNombre: request.session.usuNombre || ''
+        usuNombre: request.session.usuNombre || '',
+        csrfToken: request.csrfToken(),
     });
 };
 
