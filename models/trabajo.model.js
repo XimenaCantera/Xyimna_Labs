@@ -1,38 +1,35 @@
-const trabajadores = [
-    {
-        Nombre: "Ximena Cantera",
-        Area: "Reparación",
-        Correo: "xyimna@gmail.com",
-        Local: "av.centro cd.48023",
-    },
-    {
-        Nombre: "Yael Cortés",
-        Area: "Mantenimiento",
-        Correo: "yao@gmail.com",
-        Local: "av. boulevard pricnipal cd.48083",
-    }
-];
+const db = require('../util/database');
 
 module.exports = class Trabaja {
-    //todo - Nuevo objeto para definir propiedades del modelo
-    constructor(Nombre, Area, Correo, Local){
+    constructor(Nombre, Area, Correo, Local, Area_id) {
         this.Nombre = Nombre;
         this.Area = Area;
         this.Correo = Correo;
         this.Local = Local;
+        this.Area_id = Area_id;
     }
 
-    //todo - Guardar nuevo objeto
-    save(){
-        trabajadores.push({
-            Nombre: this.Nombre,
-            Area: this.Area,
-            Correo: this.Correo,
-            Local: this.Local,
-        });
+    save() {
+        return db.execute(
+            `INSERT INTO trabajadores (Nombre, Area, Correo, Local, Area_id) 
+            VALUES (?, ?, ?, ?, ?)`,
+            [this.Nombre, this.Area, this.Correo, this.Local, this.Area_id]
+        );
     }
-    
-    static fetchAll(){
-        return trabajadores;
+
+    static fetchAll() {
+        return db.execute('SELECT * FROM trabajadores');
     }
-}
+
+    static fetch(id) {
+        if (id) {
+            return this.fetchOne(id);
+        } else {
+            return this.fetchAll();
+        }
+    }
+
+    static fetchOne(id) {
+        return db.execute('SELECT * from trabajadores WHERE id = ?', [id]);
+    }
+};

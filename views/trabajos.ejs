@@ -18,7 +18,7 @@
         <p class="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-black">
             En nuestro taller te podemos pfrecer la mejor solución, contamos con años de experiencia, gusto por la elegancia, exactitud y esmero.
         </p>
-        <a href="/Agregar" class="text-white bg-amber-400 hover:bg-orange-600 focus:ring-4 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600">Agrega trabajadores</a>
+        <a href="/trabajadores/Agregar" class="text-white bg-amber-400 hover:bg-orange-600 focus:ring-4 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:hover:bg-amber-400 focus:outline-none dark:bg-orange-600">Agrega trabajadores</a>
     </div>
 </div> 
 <hr class="mt-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" /><br>
@@ -82,29 +82,33 @@
 <hr class="mt-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
 <h1 class="flex items-center justify-center my-16 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-black">Equipo de trabajo</h1>
 
-<div class="grid grid-cols-4 gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     <% for (let trabajador of trabajadores) { %>
                         
-        <div class="w-full max-w-sm border border-gray-200 rounded-lg shadow bg-[#E48F45]">
-            <div class="flex flex-col items-center pb-10">
-                <h5 class="mb-1 text-xl font-medium dark:text-white"><%= trabajador.Nombre %></h5>
-                <span class="text-sm dark:text-black"><%= trabajador.Area %></span>
-                <span class="text-sm dark:text-black"><%= trabajador.Correo %></span>
-                <span class="text-sm dark:text-black"><%= trabajador.Local %></span>
-            </div>
+        <div class="bg-[#E48F45]/65 rounded-lg shadow-md p-4">
+            <h5 class="text-xl font-semibold mb-2"><a href="/trabajadores/<%= trabajador.id %>" class="text-black hover:text-red-900 transition-colors duration-300"><%= trabajador.Nombre %></a></h5>
+            <p class="text-sm mb-2 text-black"><span class="font-semibold">Área:</span> <%= trabajador.Area %></p>
+            <p class="text-sm mb-2 text-black"><span class="font-semibold">Correo:</span> <%= trabajador.Correo %></p>
+            <p class="text-sm mb-2 text-black"><span class="font-semibold">Local:</span> <%= trabajador.Local %></p>
         </div>
         
     <% } %>
 </div>
 
+
 <!--! Hacer bonito en semana 5-->
 <% if(lastTrabajador != '') { %> 
-    <div class="my-8">El trabajador novato es: <%= lastTrabajador %>.</div>
+    <div class="my-8 bg-gray-100 p-4 rounded-lg shadow-md">
+        <p class="text-lg font-semibold text-gray-800">El trabajador novato es: <%= lastTrabajador %>.</p>
+    </div>
 <% } %>
 
 <% if(lastLocal != '') { %> 
-    <div>¡Tengan cuidado trabajadores de <%= lastLocal %>!</div>
+    <div class="my-8 bg-gray-100 p-4 rounded-lg shadow-md">
+        <p class="text-lg font-semibold text-gray-800">¡Tengan cuidado trabajadores de <%= lastLocal %>!</p>
+    </div>
 <% } %>
+
 
 <!--? Agregar partials para footer -->
 <%- include('includes/foot.ejs') %>
